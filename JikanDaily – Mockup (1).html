@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>JikanDaily – Mockup</title>
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@200;300;400&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0d;--card:#17171b;--line:#26262c;--tx:#f2f2f4;--mute:#8d8d96;--acc:#f5c76b;--red:#ff7a6b;--grn:#8fd6a8;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root:not([data-theme="light"]){color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:#050506;color:var(--tx);font-family:'Prompt',system-ui,sans-serif;font-weight:300}
+h1{font-weight:200;font-size:28px;margin:28px 20px 4px}
+.sub{color:var(--mute);margin:0 20px 20px;font-size:14px}
+.row{display:flex;gap:22px;overflow-x:auto;padding:0 20px 32px}
+.col{flex:0 0 auto;width:262px}
+.cap{font-size:12px;color:var(--mute);margin:0 4px 8px}
+.cap b{color:var(--acc);font-weight:400}
+.ph{width:262px;height:540px;background:var(--bg);border:1px solid var(--line);border-radius:36px;padding:22px 16px;position:relative;overflow:hidden;display:flex;flex-direction:column;gap:10px}
+.t{font-size:12px;color:var(--mute)}
+.big{font-size:26px;font-weight:200;line-height:1.25}
+.card{background:var(--card);border-radius:20px;padding:12px 14px;font-size:13px}
+.card small{color:var(--mute);display:block;font-size:11px}
+.btn{background:var(--acc);color:#111;border-radius:999px;text-align:center;padding:11px;font-size:13px;font-weight:400}
+.btn.o{background:none;color:var(--tx);border:1px solid var(--line)}
+.flex{display:flex;justify-content:space-between;align-items:center}
+.line{height:2px;background:var(--acc);margin:2px 0;position:relative}
+.line:after{content:"ปิดร้าน 21:00";position:absolute;right:0;top:-17px;font-size:10px;color:var(--acc)}
+.bar{height:6px;border-radius:9px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--acc)}
+.dots{display:flex;gap:6px}.dots i{flex:1;height:34px;border-radius:12px;background:var(--line)}
+.dots i.on{background:var(--grn)}.dots i.off{background:var(--red);opacity:.7}
+.warn{border:1px solid var(--red);color:var(--red)}
+.moon{width:84px;height:84px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#fff3cf,var(--acc));margin:14px auto;box-shadow:0 0 50px rgba(245,199,107,.35)}
+.ctr{text-align:center}
+.nav{margin-top:auto;display:flex;justify-content:space-around;font-size:11px;color:var(--mute);border-top:1px solid var(--line);padding-top:10px}
+.nav .a{color:var(--acc)}
+.seg{display:flex;gap:6px;margin:0 20px 16px}.seg button{font:inherit;font-size:13px;color:var(--mute);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:7px 18px;cursor:pointer}.seg button.on{color:#111;background:var(--acc);border-color:var(--acc)}
+.ph{padding:46px 16px 34px}
+.sb{position:absolute;top:0;left:0;right:0;height:40px;display:flex;justify-content:space-between;align-items:center;padding:6px 22px 0;font-size:11px}
+.cam{position:absolute;left:50%;top:10px;transform:translateX(-50%);background:#000;border:1px solid var(--line)}
+body[data-p=ios] .cam{width:70px;height:20px;border-radius:12px}
+body[data-p=android] .cam{width:10px;height:10px;border-radius:50%;top:13px}
+.gb{position:absolute;left:0;right:0;bottom:0;height:28px;display:flex;justify-content:center;align-items:center;color:var(--mute);font-size:12px}
+body[data-p=ios] .gb:before{content:"";width:92px;height:4px;border-radius:9px;background:var(--tx);opacity:.8}
+body[data-p=android] .gb:before{content:"\25C1    \25CB    \25A1";letter-spacing:.15em}
+body[data-p=android] .ph{border-radius:28px}
+body[data-p=android] .btn{border-radius:14px}
+body[data-p=android] .card{border-radius:14px}
+</style>
+</head>
+<body data-p="ios">
+<h1>JikanDaily <span style="color:var(--mute)">ปิดร้านตรงเวลา</span></h1>
+<p class="sub">แอปที่ให้ทุกวันเป็น "ร้าน" ที่ต้องปิดตรงเวลา เพื่อรักษาเวลานอนและเวลาผ่อนคลาย · เลื่อนดูหน้าจอไปทางขวา</p>
+<div class="seg"><button class="on" data-p="ios">iOS</button><button data-p="android">Android</button></div>
+<div class="row">
+
+<div class="col"><p class="cap"><b>1</b> ตั้งเวลาปิดร้าน</p>
+<div class="ph">
+<div class="t">เริ่มต้นใช้งาน</div>
+<div class="big">วันนี้อยากปิดร้านกี่โมง?</div>
+<div class="moon"></div>
+<div class="card ctr"><span style="font-size:30px;font-weight:200">21:00</span><small>เวลาปิดร้าน</small></div>
+<div class="card flex"><span>เวลาดูอนิเมะ/ชินจัง</span><span style="color:var(--acc)">2 ชม.</span></div>
+<div class="card flex"><span>รางวัลหลังปิดร้าน</span><span style="color:var(--acc)">ชินจัง ▸</span></div>
+<div class="btn" style="margin-top:auto">เปิดร้านวันนี้</div>
+</div></div>
+
+<div class="col"><p class="cap"><b>2</b> หน้าวันนี้</p>
+<div class="ph">
+<div class="flex"><span class="t">พุธ 4 พ.ย.</span><span class="t">🔥 5 วัน</span></div>
+<div class="big">เหลืออีก 6 ชม.<br>ก่อนปิดร้าน</div>
+<div class="card"><div class="flex"><span>ตรวจงานนักศึกษา</span><span class="t">90 น.</span></div></div>
+<div class="card"><div class="flex"><span>ประชุมภาค (Zoom)</span><span class="t">60 น.</span></div></div>
+<div class="line"></div>
+<div class="card" style="opacity:.55"><div class="flex"><span>ทำเอกสารประเมิน</span><span class="t">120 น.</span></div><small>ล้ำเวลาปิดร้าน</small></div>
+<div class="bar"><i style="width:72%"></i></div>
+<div class="t">งานที่ใส่ไว้ใช้เวลา 72% ของเวลาก่อนปิดร้าน</div>
+<div class="nav"><span class="a">วันนี้</span><span>งาน</span><span>หนี้นอน</span></div>
+</div></div>
+
+<div class="col"><p class="cap"><b>3</b> เตือนงานล้นร้าน</p>
+<div class="ph">
+<div class="t">เพิ่มงาน: ทำเอกสารประเมิน</div>
+<div class="card warn"><b style="font-weight:400">งานนี้จะกินเวลานอน 2 ชม.</b><small style="color:var(--red)">ถ้าทำต่อ จะนอนได้ประมาณ 4 ชม.</small></div>
+<div class="t" style="margin-top:6px">เลือกวิธีจัดการ</div>
+<div class="card flex"><span>ฝากไว้พรุ่งนี้ 09:00</span><span class="t">ฟรี</span></div>
+<div class="card flex"><span>แบ่งงานเป็น 2 ส่วน</span><span class="t">แนะนำ</span></div>
+<div class="card flex"><span>ตัดงานเล็กออก 1 ชิ้น</span><span class="t">ดูรายการ</span></div>
+<div class="card flex"><span>ยืมเวลานอน 2 ชม.</span><span style="color:var(--red)">+2 หนี้นอน</span></div>
+<div class="btn" style="margin-top:auto">ใช้ตัวเลือกที่แนะนำ</div>
+</div></div>
+
+<div class="col"><p class="cap"><b>4</b> พิธีปิดร้าน + รางวัล</p>
+<div class="ph">
+<div class="t">21:00 · ถึงเวลาปิดร้าน</div>
+<div class="big">วันนี้ทำเสร็จ 3 จาก 4 งาน</div>
+<div class="card"><small>ฝากไว้พรุ่งนี้</small>ทำเอกสารประเมิน (เตือน 09:00)</div>
+<div class="moon" style="width:64px;height:64px"></div>
+<div class="card ctr">ปลดล็อกเวลาของอาจารย์<br><span style="color:var(--acc);font-size:15px">ชินจัง/อนิเมะ 2 ชม.</span></div>
+<div class="btn">ปิดร้านและเปิดชินจัง</div>
+<div class="btn o">ยังไม่พร้อมปิด</div>
+<div class="t ctr" style="margin-top:auto">หน้าจอหรี่ลงอัตโนมัติ</div>
+</div></div>
+
+<div class="col"><p class="cap"><b>5</b> หนี้นอนรายสัปดาห์</p>
+<div class="ph">
+<div class="t">สัปดาห์นี้</div>
+<div class="big">หนี้นอนสะสม<br><span style="color:var(--red)">5.5 ชม.</span></div>
+<div class="dots"><i class="on"></i><i class="off"></i><i class="on"></i><i class="off"></i><i class="on"></i><i></i><i></i></div>
+<div class="flex t"><span>จ</span><span>อ</span><span>พ</span><span>พฤ</span><span>ศ</span><span>ส</span><span>อา</span></div>
+<div class="card"><small>เฉลี่ยนอน</small>5 ชม. 40 น. (เป้า 7 ชม.)</div>
+<div class="card"><small>ปิดร้านตรงเวลา</small>3 จาก 5 วัน · 🔥 ต่อเนื่อง 1 วัน</div>
+<div class="card" style="border:1px solid var(--acc)"><small style="color:var(--acc)">แผนใช้หนี้</small>เสาร์นี้ปิดร้านก่อน 20:00 ดูชินจังเต็ม 2 ชม. และไม่รับงานเพิ่ม</div>
+<div class="nav"><span>วันนี้</span><span>งาน</span><span class="a">หนี้นอน</span></div>
+</div></div>
+
+</div>
+<script>
+document.querySelectorAll('.ph').forEach(function(p){p.insertAdjacentHTML('afterbegin','<div class="sb"><span>9:41</span><i class="cam"></i><span>5G \u25AE</span></div>');p.insertAdjacentHTML('beforeend','<div class="gb"></div>')});
+document.querySelectorAll('.seg button').forEach(function(b){b.onclick=function(){document.body.dataset.p=b.dataset.p;document.querySelectorAll('.seg button').forEach(function(x){x.classList.toggle('on',x===b)})}});
+</script>
+</body>
+</html>
